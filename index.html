@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>Minesweeper</title>
+</head>
+<body >
+
+  <div class="container" id="container">
+    <div class="nav">
+      <h2><i class="fas fa-virus"></i>Minesweeper</h2>
+      <div class="btn-box">
+        <button id="btn_minimize"><i class="fas fa-window-minimize"></i></button>
+        <button><i class="far fa-window-maximize"></i></button>
+        <button id="btn_close"><i class="fas fa-times" id="close"></i></button>
+      </div>
+    </div>
+    <div class="nav-2">
+      <h4 id="btn_game"><span>G</span>ame</h4>
+      <h4 id="btn_rule"><span>H</span>elp</h4>
+        <div class="new-game-box tile" id="new_game_box">
+          <ul>
+            <li id="btn_new_game"><i class="fas fa-virus"></i> New Game</li>
+            <li id="btn_back_to_game"><i class="fas fa-virus"></i> Back to Game</li>
+            <li id="btn_close_game"><i class="fas fa-virus"></i> Close Game</li>
+          </ul>
+        </div>
+      <div class="rule-box tile" id="rule_box">
+        <i class="fas fa-times btn_close--rules" id="btn_close_rules"></i>
+        <h3>How to Play</h4>
+        <p><i class="fas fa-virus"></i> Tap on any unrevealed square to start the game. The timer starts once the first square has been revealed.</p>
+  
+        <p><i class="fas fa-virus"></i> Numbers on the squares indicate the number of surrounding mines (this includes all 8 squares surrounding it in a 3×3 grid). Based on these numbers and how their 3×3 grids overlap, you can identify or suspect under which squares mines are hidden.</p>
+        
+        <p><i class="fas fa-virus"></i> Place a flag by right clicking the square to mark it as dangerous. Reveal all safe squares without mines and place all the flags on the mines to win the game.</p>
+  
+        <p><i class="fas fa-virus"></i> You can restart the game by click on the smiley face.</p>
+      </div>
+    </div>
+    <div class="game-container tile">
+      <div class="border">
+        <div class="counter-box pool">
+          <div class="timer-box" id="timer"></div>
+          <div class="smile-box tile">
+            <i class="far fa-smile fa-2x" id="alive"></i>
+            <i class="far fa-dizzy fa-2x" id="dead"></i>
+            <i class="far fa-grin-hearts" ></i>
+            <i class="fas fa-trophy" id='winner'></i>
+          </div>
+          <div class="flag-box" id="flag-counter"></div>
+        </div>
+        <div class="line"></div>
+        <div class="grid pool"></div>
+      </div>
+    </div>
+  </div>
+  <div class="icon-box">
+    <img src="/icon.png" alt="minesweeper starter icon" class="starter-icon" id="starter_icon">
+    <small>WINMINE.exe</small>
+  </div>
+
+
+  <nav class="toolbar">
+    <img src="./start_button.jpg" alt="windows95 Start button" class="start_button">
+    <div id="toolbar_icon" class="starter-icon--toolbar pool">
+      <img src="/icon.png" alt="minesweeper starter icon" class="starter-icon--sm" id="toolbar_icon"> 
+      <small>Minesweeper</small>
+    </div>
+    <div class="time-box pool">
+      <small id="time">10:25</small>
+      <small id="date">05/07/2021</small>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
